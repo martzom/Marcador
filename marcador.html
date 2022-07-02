@@ -60,11 +60,11 @@
 
 		#reloj {
 			padding: 5px 10px;
-			width: 170px;
+			width: 270px;
 			border: 1px solid black;
 			font: bold 1.5em digital, europa, arial;
 			text-align: center;
-			margin: 4px
+			margin: 9px
 		}
 
 		#cronometro [type=button] {
@@ -176,7 +176,7 @@ function cronometro () {
 							<h1 class="display-1 text-center  text-white" style="background-color: rgb(97, 5, 177)">
                                 <input type="text" id="fname" name="fname size=40" class="inputcentrado" style="width:400px">
                             </h1></imp></a>
-							<h1><select class="text-center display-1" id="exampleFormControlSelect1">
+							<h1><select  class="text-center display-1" id="exampleFormControlSelect1">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -210,9 +210,9 @@ function cronometro () {
 									<option>30</option>
 								</select></h1>
 							<h1>
-								<p class="card-text text-center">FALTAS</p>
+								<p class="card-text text-center" style="color:#f0e800">FALTAS</p>
 							</h1>
-							<h1><select class="text-center display-1" id="exampleFormControlSelect1">
+							<h1><select  class="text-center display-1" id="exampleFormControlSelect1">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -260,7 +260,7 @@ function cronometro () {
                                 <h1 class="display-1 text-center text-white" style="background-color: #6b1d80">
                                     <input type="text color" id="fname" name="fname size=40" class="inputcentrado" style="width:400px">
                                 </h1></imp></a>
-							<h1><select class="text-center display-1" id="exampleFormControlSelect1">
+							<h1><select  class="text-center display-1" id="exampleFormControlSelect1">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -294,9 +294,9 @@ function cronometro () {
 									<option>30</option>
 								</select></h1>
 							<h1>
-								<p class="card-text text-center">FALTAS</p>
+								<p class="card-text text-center" style="color:#f0e800">FALTAS</p>
 								</h1>
-								<h1><select class="text-center display-1" id="exampleFormControlSelect1">
+								<h1><select  class="text-center display-1" id="exampleFormControlSelect1">
 										<option>0</option>
 										<option>1</option>
 										<option>2</option>
@@ -338,14 +338,12 @@ function cronometro () {
 		
 
 		<div class="container">
-			
-				<h1 class=" display-2">TIEMPO</h1>
-			
-			<div class="d-flex align-self-end">
-        <div class="reloj"  id="Horas">00</div>
-		<div class="reloj" id="Minutos">:00</div>
-		<div class="reloj" id="Segundos">:00</div>
-		<div class="reloj" id="Centesimas">:00</div>
+				<h1 class=" display-5" style="color:#f0e800">TIEMPO</h1>
+				<div class="d-flex align-self-end">
+        <div class="reloj" style="color:#f0e800" id="Horas">00</div>
+		<div class="reloj" style="color:#f0e800" id="Minutos">:00</div>
+		<div class="reloj" style="color:#f0e800" id="Segundos">:00</div>
+		<div class="reloj" style="color:#f0e800" id="Centesimas">:00</div>
 				</div>
         </div>
 	<div clas="container">
@@ -355,7 +353,7 @@ function cronometro () {
             <input type="button" class="boton " id="inicio" value="Iniciar &#9658;" onclick="inicio();">
             <input type="button" class="boton " id="parar" value="Parar &#8718;" onclick="parar();" disabled>
             <input type="button" class="boton " id="continuar" value="Reanudar &#8634;" onclick="inicio();" disabled>
-            <input type="button" class="boton " id="reinicio" value="Reiniar &#8635;" onclick="reinicio();" disabled>
+            <input type="button" class="boton " id="reinicio" value="Reiniciar &#8635;" onclick="reinicio();" disabled>
         </div> <br><br>
 	</div>
   

@@ -1,0 +1,7 @@
+1-Abre con tu navegador el archivo index (index.html).
+2-Dentro de la pagina, dirigete al apartado "marcador" que esta colocado en la parte superior derecha de color verde.
+3-Para salirte del marcador solo dar retroceder en tu navegador.
+4-Para el contador de 45 segundos, dirigete al apartado "segiundos" que esta colocado en la parte superior derecha.
+ -----------------------------------------IMPORTANTE-----------------------------------------------------
+1-No mover o separar ninguna carpeta o archivo.
+2-Si mueves algo a otra carpeta mueve todos los archivos juntos.

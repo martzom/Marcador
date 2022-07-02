@@ -68,6 +68,10 @@ display: flex;
 align-items: center;
 }
 
+.numero{
+  font-size: 80px;
+}
+
 .crono {
 color: #000000;
 font-family: 'Agency FB', arial;
@@ -85,19 +89,21 @@ color: red !important;
 
 
 .padre {
-background-color: #fafafa;
+background-color: #060606;
 margin: 1rem;
 padding: 1rem;
-border: 2px solid #ccc;
+border: 1px solid rgb(7, 6, 6);
 /* IMPORTANTE */
 text-align: center;
+
 }
+
 .segundos{
 display: flex;
 align-items: center;
 justify-content: center;
 height: 100vh;
-font-size: 15vw;
+font-size: 50vw;
 }
 </style>
 <script type="text/javascript">
@@ -150,14 +156,44 @@ clearInterval(counter);
 });
 
 $('#reset').on('click', function() {
+  
 document.getElementById("reloj_sg").classList.remove("rojo");
 document.getElementById("reloj_cs").classList.remove("rojo");
 clearInterval(counter);
 count = initial;
 displayCount(count);
+
 });
 
 displayCount(initial);
+
+
+function start(){
+  tecla_inicio=event.keyCode;
+  tecla_reset=event.keyCode;
+  tecla_stop=event.keyCode;
+  if (tecla_inicio==73){
+document.getElementById("reloj_sg").classList.remove("rojo");
+document.getElementById("reloj_cs").classList.remove("rojo");
+clearInterval(counter);
+initialMillis = Date.now();
+counter = setInterval(timer, 1);
+  }
+  if (tecla_stop==83){
+    clearInterval(counter);
+  }
+  if (tecla_reset==82){
+document.getElementById("reloj_sg").classList.remove("rojo");
+document.getElementById("reloj_cs").classList.remove("rojo");
+clearInterval(counter);
+count = initial;
+displayCount(count);
+  }
+}
+
+
+window.onkeydown=start;
+
       }
 </script>
      
@@ -170,19 +206,19 @@ displayCount(initial);
 
 
   <div id="cronometro">
-    <div class="padre display-1 segundos" style="color:#6b1d80">
-      <span id="reloj_sg">00</span>
-      <span id="reloj_cs" Style="Display:none;">00</span>
+    <div class="padre segundos" style="color:#ccff02">
+       <span style="font-weight: 1000;" id="reloj_sg">00</span>
+      <span  id="reloj_cs" Style="Display:none;">00</span>
       
     </div>
   </div>
 
 <div style="text-align: center; ">
-  <button class="boton " id="start">iniciar</button>
-  <button class="boton " id="stop">parar</button>
+ <a > <button class="boton  " id="start">iniciar</button>
+  <button class="boton " id="stop">parar</button></a>
   <button class="boton " id="reset">reiniciar</button>
 </div><br>
   
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
 </html>
